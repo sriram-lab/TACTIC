@@ -6,15 +6,20 @@ Transfer learning And Crowdsourcing to predict Therapeutic Interactions Cross-sp
 [![license badge](https://img.shields.io/badge/License-GNU%20GPL-blue)](https://github.com/sriram-lab/TACTIC/blob/master/LICENSE)
 [![DOI badge](https://badgen.net/badge/DOI/10.15252%2Fmsb.20156777/blue)](https://doi.org/10.15252/msb.20156777)
 
+# Summary
+This GitHub repository contains all code and data files used to develop the TACTIC approach (citation below).  
+  
+* place holder *  
+
 # Repository structure: 
 ```
 TACTIC
-└───data      [documentation and example usage]
+└───data                        [directory containing all relevant data files]
 |   LICENSE
 |   README.md
 |   TACTIC_analysis.ipynb       [Jupyter Notebook containing all analyses described in TACTIC manuscript]
 |   TACTIC_logo.png             [PNG file for TACTIC logo]
-|   TACTIC_visualization.ipynb  [Jupyter Notebook that visualizes all TACTIC manuscript output]
+|   TACTIC_visualization.ipynb  [Jupyter Notebook that visualizes all TACTIC manuscript outputs]
 ```
 
 # License
