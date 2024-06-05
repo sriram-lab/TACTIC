@@ -4,12 +4,11 @@
 Transfer learning And Crowdsourcing to predict Therapeutic Interactions Cross-species.
 
 [![license badge](https://img.shields.io/badge/License-GNU%20GPL-blue)](https://github.com/sriram-lab/TACTIC/blob/master/LICENSE)
-[![DOI badge](https://badgen.net/badge/DOI/10.15252%2Fmsb.20156777/blue)]()
 
 # Summary
 This GitHub repository contains all code and data files used to develop the TACTIC approach (citation below).  
   
-Chung, C. H., Chang, D. C., Rhoads, N. M., Shay, M. R., Srinivasan, K., Okezue, M. A., Brunaugh, A. D., and Chandrasekaran, S. (2024). Transfer learning predicts species-specific drug interactions in emerging pathogens. *bioRxiv*
+Chung, C. H., Chang, D. C., Rhoads, N. M., Shay, M. R., Srinivasan, K., Okezue, M. A., Brunaugh, A. D., and Chandrasekaran, S. (2024). Transfer learning predicts species-specific drug interactions in emerging pathogens. *bioRxiv* [preprint]
 
 # Repository structure: 
 ```
