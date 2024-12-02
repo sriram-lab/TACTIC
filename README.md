@@ -19,6 +19,7 @@ TACTIC
 |   README.md
 |   TACTIC_analysis.ipynb       [Jupyter Notebook containing all analyses described in TACTIC manuscript]
 |   TACTIC_logo.png             [PNG file for TACTIC logo]
+|   TACTIC_tutorial.ipynb       [Jupyter notebook that guides a new user on how to use the already built TACTIC model]
 |   TACTIC_visualization.ipynb  [Jupyter Notebook that visualizes all TACTIC manuscript outputs]
 ```
 
