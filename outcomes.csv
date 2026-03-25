@@ -1,0 +1,33 @@
+,Interaction,Organisms,True outcome,Predicted outcome,Reference
+0,"AMK, AMP",E. coli,Synergy,Additive,"2, 5"
+1,"AMK, AMP",P. aeruginosa,Synergy,Antagonism,"2, 5"
+2,"AMK, AMP",S. aureus,Synergy,Additive,2
+3,"AMK, AZT",E. coli,Synergy,Synergy,3
+4,"AMK, AZT",P. aeruginosa,Synergy,Synergy,"3, 10, 19"
+5,"AMK, CFZ",P. aeruginosa,Synergy,Synergy,19
+6,"AMK, CIP",P. aeruginosa,Additive,Additive,10
+7,"AMK, PMB",P. aeruginosa,Synergy,Antagonism,22
+8,"AMP, AZT",E. coli,Synergy,Synergy,5
+9,"AMP, AZT",P. aeruginosa,Synergy,Synergy,"5, 18"
+10,"AMP, CFZ",P. aeruginosa,Antagonism,Synergy,18
+11,"AZT, CIP",P. aeruginosa,Additive,Additive,10
+12,"AZT, CFZ",P. aeruginosa,Synergy,Synergy,18
+13,"AZT, GEN",P. aeruginosa,Synergy,Antagonism,4
+14,"AZT, PMB",P. aeruginosa,Synergy,Synergy,22
+15,"AZT, TOB",P. aeruginosa,Synergy,Synergy,4
+16,"CFZ, CIP",P. aeruginosa,Antagonism,Synergy,21
+17,"CFZ, TOB",P. aeruginosa,Synergy,Synergy,21
+18,"CHL, PMB",P. aeruginosa,Synergy,Synergy,22
+19,"CIP, PMB",P. aeruginosa,Synergy,Additive,22
+20,"CIP, TOB",P. aeruginosa,Antagonism,Antagonism,21
+21,"CLA, RIF",M. ulcerans,Synergy,Synergy,14
+22,"FOS, PMB",P. aeruginosa,Synergy,Synergy,22
+23,"LIN, PMB",P. aeruginosa,Antagonism,Synergy,22
+24,"MIN, PMB",P. aeruginosa,Synergy,Synergy,22
+25,"PMB, RIF",P. aeruginosa,Synergy,Synergy,"1, 22"
+26,"PMB, TMP",H. influenzae,Synergy,Synergy,7
+27,"PMB, TMP",P. aeruginosa,Antagonism,Synergy,22
+28,"PMB, TMP",S. pneumoniae,Synergy,Synergy,7
+29,"RIF, SM",M. ulcerans,Synergy,Antagonism,14
+30,"RIF, SM",P. aeruginosa,Antagonism,Additive,1
+31,"RIF, TET",P. aeruginosa,Antagonism,Additive,1
