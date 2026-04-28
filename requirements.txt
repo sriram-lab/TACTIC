@@ -1,0 +1,27 @@
+# TACTIC dependencies
+# Run notebooks with: jupyter notebook
+
+# Core scientific stack
+numpy
+pandas
+scipy
+scikit-learn>=1.2.0
+statsmodels
+
+# Visualization
+matplotlib
+seaborn
+plotly
+matplotlib-venn
+statannot
+
+# Notebook
+jupyter
+tqdm
+
+# Data I/O
+openpyxl
+opencv-python
+
+# INDIGO chemogenomics package
+indigopy-sriram-lab

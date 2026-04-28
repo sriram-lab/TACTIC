@@ -23,8 +23,6 @@ Key notebooks and their roles:
 | `TACTIC_analysis.ipynb` | Core manuscript analysis — trains models, runs holdout validation, produces prediction results | ~6–8 hours |
 | `TACTIC_visualization.ipynb` | Generates all publication figures from `TACTIC_data.pkl` | minutes–hours |
 | `TACTIC_tutorial.ipynb` | Walkthrough for extending TACTIC to new strains/drugs (K. pneumoniae example) | moderate |
-| `Saureus_validation.ipynb` | S. aureus prediction validation | moderate |
-| `ClinicalTrial_scraper.ipynb` | NLP pipeline (CRF model) that extracts pathogen/treatment data from clinical trial XML files | moderate |
 
 `TACTIC_data.pkl` (~1.5 GB) is the serialized output of `TACTIC_analysis.ipynb` and is the primary input to visualization and downstream notebooks. If it is absent or stale, re-run the analysis notebook first.
 
@@ -32,19 +30,20 @@ Key notebooks and their roles:
 
 ```
 data/
-  omics_data.xlsx       # E. coli chemogenomics + M. tb transcriptomics (48 MB)
-  ixn_data.xlsx         # Experimental drug interaction outcomes + drug key
-  TACTIC_output.xlsx    # Full prediction landscape (19 MB)
-  OrtholugeDB/          # Gene orthology maps per strain vs. E. coli MG1655 and M. tb H37Rv
-  Endophthalmitis/      # SynergyFinder Bliss/Loewe scores for endophthalmitis strains
-  GSEA/                 # Gene set enrichment results
-  sample/               # Tutorial sample data (K. pneumoniae orthology)
-TACTIC_data.pkl         # Serialized trained models + predictions (primary runtime artifact)
-TACTIC_data2.pkl        # Alternate serialized dataset
-LF_data.pkl             # LB-medium-specific dataset
+  omics_data.xlsx         # E. coli chemogenomics + M. tb transcriptomics (48 MB)
+  ixn_data.xlsx           # Experimental drug interaction outcomes + drug key
+  LF_standard.xlsx        # LB-medium-specific experimental data
+  biolog_pm01.xlsx        # Biolog PM01 carbon source data
+  Van_2023_fig2a_hm.jpg   # Heatmap image from Van et al. 2023 (used for image digitization)
+  OrtholugeDB/            # Gene orthology maps per strain vs. E. coli MG1655 and M. tb H37Rv
+  Endophthalmitis/        # Endophthalmitis strain data (experimental data + orthology files)
+  GSEA/                   # Gene set enrichment gene lists
+  sample/                 # Tutorial sample data (K. pneumoniae orthology + screenshots)
+TACTIC_data.pkl           # Serialized trained models + predictions (~1.5 GB; primary runtime artifact)
+requirements.txt          # Python package dependencies
 ```
 
-Orthology files in `data/OrtholugeDB/` follow the naming convention `<strain>_orthologs.xlsx` and are required to extend predictions to new strains.
+Orthology files in `data/OrtholugeDB/` follow the naming convention `<strain>_orthologs.txt` and are required to extend predictions to new strains.
 
 ## Architecture
 
@@ -53,7 +52,7 @@ Orthology files in `data/OrtholugeDB/` follow the naming convention `<strain>_or
 2. Orthology maps translate E. coli and M. tb gene features to the target strain's gene space.
 3. The combined sparse feature matrix (E. coli + M. tb components) feeds a `sklearn` RandomForestRegressor.
 
-**Key external dependency — `indigopy`:** This is a non-PyPI library (the INDIGO chemogenomics package). It must be installed separately; check the README or ask the lab for the source. Functions used: `indigopy.featurize()`, `indigopy.classify()`.
+**Key external dependency — `indigopy`:** The INDIGO chemogenomics package. Install with `pip install indigopy-sriram-lab`. Functions used: `indigopy.featurize()`, `indigopy.classify()`.
 
 **Prediction output:** Continuous interaction scores (roughly −2 to +2); negative = antagonism, positive = synergy. Post-processing classifies into synergistic/antagonistic using a threshold.
 
@@ -61,14 +60,19 @@ Orthology files in `data/OrtholugeDB/` follow the naming convention `<strain>_or
 
 ## Dependencies
 
-No `requirements.txt` exists. Packages used across notebooks:
+All dependencies are listed in `requirements.txt` and can be installed with:
+
+```bash
+pip install -r requirements.txt
+```
+
+Key packages:
 
 - `scikit-learn` ≥ 1.2.0 (RandomForestRegressor and other estimators)
 - `pandas`, `numpy`, `scipy`
-- `seaborn`, `matplotlib`
+- `seaborn`, `matplotlib`, `plotly`, `matplotlib-venn`, `statannot`
 - `openpyxl` (Excel I/O)
 - `statsmodels` (multiple testing correction via `multipletests`)
-- `sklearn_crfsuite` (CRF model in `ClinicalTrial_scraper.ipynb`)
-- `cv2` / OpenCV (image digitization in validation notebook)
+- `opencv-python` (image digitization in `TACTIC_analysis.ipynb` section 7)
 - `tqdm`
-- `indigopy` (non-PyPI, see above)
+- `indigopy` — install via `pip install indigopy-sriram-lab`
