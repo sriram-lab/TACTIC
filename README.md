@@ -11,16 +11,27 @@ This GitHub repository contains all code and data files used to develop the TACT
   
 Chung, C. H., Chang, D. C., Rhoads, N. M., Shay, M. R., Srinivasan, K., Okezue, M. A., Brunaugh, A. D., and Chandrasekaran, S. (2024). Transfer learning predicts species-specific drug interactions in emerging pathogens. *bioRxiv* [preprint](https://doi.org/10.1101/2024.06.04.597386)
 
-# Repository structure: 
+# Installation
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
+
+# Repository structure
 ```
 TACTIC
-└───data                        [directory containing all relevant data files]
-|   LICENSE
-|   README.md
-|   TACTIC_analysis.ipynb       [Jupyter Notebook containing all analyses described in TACTIC manuscript]
-|   TACTIC_logo.png             [PNG file for TACTIC logo]
-|   TACTIC_tutorial.ipynb       [Jupyter notebook that guides a new user on how to use the already built TACTIC model]
-|   TACTIC_visualization.ipynb  [Jupyter Notebook that visualizes all TACTIC manuscript outputs]
+├───data/                       [data files]
+│   ├───Endophthalmitis/        [endophthalmitis strain data and orthology files]
+│   ├───GSEA/                   [gene set enrichment analysis gene lists]
+│   ├───OrtholugeDB/            [gene orthology maps vs. E. coli MG1655 and M. tb H37Rv]
+│   └───sample/                 [tutorial sample data for K. pneumoniae]
+│   LICENSE
+│   README.md
+│   requirements.txt            [Python package dependencies]
+│   TACTIC_analysis.ipynb       [core manuscript analyses: model training, holdout validation, prediction landscape]
+│   TACTIC_logo.png
+│   TACTIC_tutorial.ipynb       [walkthrough for extending TACTIC to new strains/drugs]
+│   TACTIC_visualization.ipynb  [generates all publication figures from TACTIC_data.pkl]
 ```
 
 # License
