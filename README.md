@@ -14,7 +14,6 @@ Chung, C. H., Chang, D. C., Rhoads, N. M., Shay, M. R., Srinivasan, K., Okezue, 
 # Installation
 ```bash
 pip install -r requirements.txt
-jupyter notebook
 ```
 
 # Repository structure
