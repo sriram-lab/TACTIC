@@ -1,7 +1,7 @@
 ![alt text](https://github.com/sriram-lab/TACTIC/blob/master/TACTIC_logo.png?raw=true)
 
 # TACTIC
-Transfer learning And Crowdsourcing to predict Therapeutic Interactions Cross-species.
+Transfer-learning And Cross-species Training to Infer Combination therapies.
 
 [![license badge](https://img.shields.io/badge/License-GNU%20GPL-blue)](https://github.com/sriram-lab/TACTIC/blob/master/LICENSE)
 [![DOI badge](https://badgen.net/badge/DOI/10.1101%2F2024.06.04.597386/blue)](https://doi.org/10.1101/2024.06.04.597386)
